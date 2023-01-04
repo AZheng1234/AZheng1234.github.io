@@ -1,0 +1,252 @@
+.fa-linkedin{
+    color: #0077b5;
+}
+/* Navbar */
+.navbar {
+    margin-bottom: 1rem;
+    padding: 13px;
+    background-color: white;
+    box-shadow: rgb(0 0 0 / 5%) 0px 5px 10px;
+}
+
+.navbar-brand {
+    font-size: 1.3rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+/* Header */
+.header-container {
+    height: 760px;
+    margin-bottom: 20px;
+}
+
+.header-title {
+    font-size: 3.5rem;
+    margin-top: 15px;
+    color: #474747;
+}
+
+.container-fluid {
+    display: flex;
+    justify-content: center;
+}
+
+.header-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 30%;
+    line-height: 3rem;
+    color: #474747;
+    font-size: 1.2rem;
+}
+
+.header-details>span {
+    background-color: #0085fd;
+    font-size: 16px;
+    line-height: 24px;
+    color: white;
+    letter-spacing: 1px;
+    font-weight: bold;
+    padding: 7px 30px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 0px;
+}
+
+.social-icons {
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.social-icons>i {
+    padding-right: 10px;
+}
+
+.fa-chevron-down {
+    font-size: 55px;
+    position: absolute;
+    top: 130%;
+}
+
+/* About section */
+#about-section {
+    padding-top: 155px;
+    padding-bottom: 120px;
+    color: #474747;
+
+}
+
+.profile-pic {
+    width: 277px;
+    height: 258px;
+    border-radius: 100%;
+}
+
+.profile-row {
+    padding: 34px;
+    background-color: #dedede3a;
+    border-radius: 20px;
+}
+
+.about-container {
+    display: flex;
+    justify-content: center;
+}
+
+.profile-container {
+    display: flex;
+    padding-right: 42px;
+    align-items: center;
+    justify-content: center;
+}
+
+#about-header {
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+    width: fit-content;
+    letter-spacing: 1px;
+}
+
+.cv-button {
+    margin-top: 1rem;
+    padding: 8px 10px;
+}
+
+.skill-icons {
+    font-size: 40px;
+}
+
+.skill-icons>div {
+    margin-right: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.skill-icon-container:hover {
+    color: #0085FD;
+}
+
+.skill-desc {
+    font-size: 14px;
+    padding-top: 5px;
+}
+
+/* Portfolio section */
+#portfolio-section {
+    height: auto;
+    margin-top: 50px;
+    padding-bottom: 148px;
+    color: #474747;
+    scroll-margin-top: 148px;
+
+}
+
+.portfolio-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.item-container {
+    box-shadow: rgba(0, 0, 0, 0.661) 0px 5px 10px;
+    width: fit-content;
+    cursor: pointer;
+}
+
+.item-container:hover .overlay-items {
+    background-color: rgba(62, 62, 62, 0.71);
+    opacity: 1;
+}
+.item-container:hover .item-text {
+    transform: translateY(0px);
+    transition-delay: 0.1s;
+}
+.overlay-items:hover{
+    transform: translateY(0px);
+}
+.portfolio-header {
+    margin-bottom: 60px;
+    font-size: 38px;
+    letter-spacing: 1px;
+}
+
+.first-item {
+    width: 575px;
+    height: 369px;
+    background: url("./images/createX.jpg");
+    background-size: 570px 360px;
+    display: flex;
+    justify-content: end;
+    flex-direction: column;
+}
+.second-item{
+    background: url("./images/twitter.jpg");
+    width: 424px;
+    height: 401px;
+    background-size: 420px;
+
+}
+.portfolio-row {
+    justify-content: space-around;
+}
+.col-md-4{
+    width: fit-content;
+    padding: 40px;
+}
+.overlay-items {
+    opacity: 0;
+    transition: all 0.2s;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: end;
+    flex-direction: column;
+    padding: 20px;
+}
+.item-title {
+    font-size: 25px;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 10px;
+    transform: translateY(0px);
+    transition-delay: 0.3s;
+}
+.item-text{
+    transform: translateY(40px);
+    transition: all 0.5s;
+}
+.item-description{
+    color: #f3f3f3
+}
+/* Contact section */
+#contact-section{
+
+}
+.contact-header{
+    font-size: 38px;
+    letter-spacing: 1px;
+}
+h4{
+    font-weight: 300;
+    font-size: 20px;
+    margin-top: 30px;
+}
+.contact-container{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 80px;
+}
+.contact-socials{
+    display: flex;
+    font-size: 33px;
+    align-items: center;
+}
+.contact-socials>*{
+    padding: 30px;
+    padding-top: 15px;
+    cursor: pointer;
+}
