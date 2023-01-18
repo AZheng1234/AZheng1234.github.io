@@ -39,6 +39,7 @@
 
 #### I want to make this mock database as realistic as possible. Where should we start?
 #### If you want to view the full dataset, click [here.](https://docs.google.com/spreadsheets/d/1VxAQSSVYZIjkwwO6W6RQ8l1BCVW3h5S1h9pl-n1kexs/edit?usp=sharing)
+<a href="https://docs.google.com/spreadsheets/d/1VxAQSSVYZIjkwwO6W6RQ8l1BCVW3h5S1h9pl-n1kexs/edit?usp=sharing" target="_blank">Open in New Tab</a>
 
 ### Buyer/Seller Tables
 #### Attributes/Columns:
