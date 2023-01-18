@@ -3,7 +3,7 @@
 ### Hi! Welcome to my project about StockX. 
 ### I'll walk you through my process of exploring Stock's database and ER diagram structure and using SQL to query and solve business problems.
 
-#### For those unfamilar with StockX, it is an online marketplace that mimics the stock market, except it sells luxury or limited edition sneakers, accessories, apparel, electronics, and more. StockX provides verification services to make sure products are genuine and not a cheap imitation, and earns commissions on sales.
+#### For those unfamilar with StockX, it is an anonymous online marketplace that mimics the stock market, except it sells luxury or limited edition sneakers, accessories, apparel, electronics, and more. StockX provides verification services to make sure products are genuine and not a cheap imitation, and earns commissions on sales.
 #### There is full transparency on ask prices, bid prices, and ask prices. There are even convenient visualizations on price history as well as your typical stock market data including:
 * 12-month trade range
 * all-time trade range
@@ -37,8 +37,21 @@
 
 #### Web scraping would have been the easiest way to collect the data, but having tried using Octoparse, I realized that the website (understandably so) protects itself from scraping programs. I will be making a sample database from SCRATCH. This is a good time to practice my spreadsheet skills!
 
-#### I want to make this mock database as realistic as possible. Where should we start?
+#### I want to make this mock database as realistic as possible and random number generators (RNG) will be VERY useful. 
+#### Where should we start?
 #### If you want to view the full dataset, open [this link](https://docs.google.com/spreadsheets/d/1VxAQSSVYZIjkwwO6W6RQ8l1BCVW3h5S1h9pl-n1kexs/edit?usp=sharing) in a new tab.
+#### You will be able to view all of the complex formulas I spent un unnecessary amount of time writing to make this dataset! :D
+
+#### A RNG sheet is included from which I randomly draw data from to create the attributes for other tables. The sheet includes:
+* List of all 50 states
+* List of all state capitals
+* 400 random cities
+* popular email domains
+* 400 sample usernames
+* 300 street names
+* 100 last names
+* Apparel sizes (S/M/L/XS/XL/XXL)
+
 
 ### Buyer/Seller Tables
 #### Attributes/Columns:
@@ -50,3 +63,8 @@
 * City
 * State
 * Zip
+
+#### ID is very simple to generate. I generated a random 4-digit number using the following formula:
+* =RANDBETWEEN(1,9999)
+* I used custom number formatting (B-0000 and S-0000) to indicate whether it was a Buyer or Seller ID.
+* 
