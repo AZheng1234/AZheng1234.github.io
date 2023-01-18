@@ -38,8 +38,7 @@
 #### Web scraping would have been the easiest way to collect the data, but having tried using Octoparse, I realized that the website (understandably so) protects itself from scraping programs. I will be making a sample database from SCRATCH. This is a good time to practice my spreadsheet skills!
 
 #### I want to make this mock database as realistic as possible. Where should we start?
-#### If you want to view the full dataset, click [here.](https://docs.google.com/spreadsheets/d/1VxAQSSVYZIjkwwO6W6RQ8l1BCVW3h5S1h9pl-n1kexs/edit?usp=sharing)
-<a href="https://docs.google.com/spreadsheets/d/1VxAQSSVYZIjkwwO6W6RQ8l1BCVW3h5S1h9pl-n1kexs/edit?usp=sharing" target="_blank">Open in New Tab</a>
+#### If you want to view the full dataset, open [this link](https://docs.google.com/spreadsheets/d/1VxAQSSVYZIjkwwO6W6RQ8l1BCVW3h5S1h9pl-n1kexs/edit?usp=sharing) in a new tab.
 
 ### Buyer/Seller Tables
 #### Attributes/Columns:
