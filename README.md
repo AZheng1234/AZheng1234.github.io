@@ -46,7 +46,7 @@
 * List of all 50 states
 * List of all state capitals
 * 400 random cities
-* popular email domains
+* Popular email domains
 * 400 sample usernames
 * 300 street names
 * 100 last names
