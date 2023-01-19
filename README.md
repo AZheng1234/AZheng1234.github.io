@@ -52,6 +52,10 @@
 * 100 last names
 * Apparel sizes (S/M/L/XS/XL/XXL)
 
+##### If you view the RNG sheet, you will notice that the email domains and apparel sizes will be listed more than once at different frequencies. 
+* For emails, this is to simulate popularity of the domain, with Gmail, Yahoo, and Outlook being much more popular than domains such as AOL, iCloud, and ATT. 
+* For apparel sizes, Medium will be the most common, Small and Large slightly less common, and the X sizes being the least common.
+
 
 ### Buyer/Seller Tables
 #### Attributes/Columns:
@@ -64,7 +68,7 @@
 * State
 * Zip
 
-#### ID is very simple to generate. I generated a random 4-digit number using the following formula:
+#### ID is very simple to make. I generated a random 4-digit number using the following formula:
 * =RANDBETWEEN(1,9999)
 * I used custom number formatting (B-0000 and S-0000) to indicate whether it was a Buyer or Seller ID.
 * 
