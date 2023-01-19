@@ -39,7 +39,8 @@
 
 #### I want to make this mock database as realistic as possible and random number generators (RNG) will be VERY useful. 
 #### Where should we start?
-#### If you want to view the full dataset, open [this link](https://docs.google.com/spreadsheets/d/1VxAQSSVYZIjkwwO6W6RQ8l1BCVW3h5S1h9pl-n1kexs/edit?usp=sharing) in a new tab.
+#### If you want to view the full dataset, open the following link in a new tab.
+#### [StockX Project Data](https://docs.google.com/spreadsheets/d/1VxAQSSVYZIjkwwO6W6RQ8l1BCVW3h5S1h9pl-n1kexs/edit?usp=sharing)
 #### You will be able to view all of the complex formulas I spent un unnecessary amount of time writing to make this dataset! :D
 
 #### A RNG sheet is included from which I randomly draw data from to create the attributes for other tables. The sheet includes:
@@ -49,8 +50,10 @@
 * Popular email domains
 * 400 sample usernames
 * 300 street names
+* A-Z
 * 100 last names
 * Apparel sizes (S/M/L/XS/XL/XXL)
+* 
 
 ##### If you view the RNG sheet, you will notice that the email domains and apparel sizes will be listed more than once at different frequencies. 
 * For emails, this is to simulate popularity of the domain, with Gmail, Yahoo, and Outlook being much more popular than domains such as AOL, iCloud, and ATT. 
