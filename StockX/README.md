@@ -22,7 +22,7 @@
 ---
 ### 1. The first step is to understand StockX's entity-relation diagram.
 
-<img src="ER Diagram.png">
+<img src="./Images/ER Diagram.png">
 
 ### To briefly explain the ER diagram, the main entities to take into account are the buyers, sellers, and the products.
 
