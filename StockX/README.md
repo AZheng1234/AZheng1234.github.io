@@ -3,8 +3,13 @@
 ## Hi! Welcome to my project about StockX. 
 ### I'll walk you through my process of exploring Stock's database and ER diagram structure and using SQL to query and solve business problems.
 
+### Skills Used:
+* Excel/Google Sheets
+* Python
+* SQL
+
 ### Contents
----
+[Entity-Relationship Diagram] (#ERD)
 ---
 ---
 
@@ -20,6 +25,7 @@
 
 ## Let's dive right in!
 ---
+### <a name = "ERD"></a>
 ### 1. The first step is to understand StockX's entity-relation diagram.
 
 <img src="./Images/ER Diagram.png">
