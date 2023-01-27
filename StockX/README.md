@@ -234,5 +234,5 @@
 ## Switching to Python!!!
 
 #### I documented my process of completing the dataset with Python in Jupyter Notebook. Please right click the following link and view in a different tab.
-#### [Completing Dataset in Python]("Auction-Item Data.ipynb")
+#### [Completing Dataset in Python](https://github.com/AZheng1234/AZheng1234.github.io/blob/main/StockX/Auction-Item%20Data.ipynb)
 
