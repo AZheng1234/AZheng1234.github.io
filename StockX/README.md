@@ -276,6 +276,7 @@
 * Sum of the previous columns
 
 <br>
+
 ### This final stretch for completing the dataset had a few more problems that I don't fully remember the details about. All I remember is that the formulas were not properly retrieving order totals, Buyer ID, Order ID, etc. I had to manually input some of the data in order to complete the Orders table. There were EVEN MORE annoyances when it came to importing it into XAMPP to use SQL with data types, table names, creating tables, etc, but I won't go into detail :)
 
 ### Thanks for making it this far into reading about my project. A LOT of effort and headache went into this when it was just supposed to be a SQL focused project for Database Management. There may be some logical flaws that I haven't caught when I did this project, but I wanted to make it AS ACCURATE AS POSSIBLE to the real deal. For funsies :) In any case, I learned a lot!
@@ -285,7 +286,7 @@
 <a name ="sql"></a>
 ## Time for SQL!!!
 
-### I created a list of questions and SQL queries that I thought would be useful/interesting insights!
+#### I created a list of questions and SQL queries that I thought would be useful/interesting insights!
 
 
 
