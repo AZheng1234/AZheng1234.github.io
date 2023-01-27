@@ -187,6 +187,37 @@
 * Bid Price
 * Ask Price
 
+<br> 
+
+#### Buyer ID
+* Randomly generated from Buyer list, anyone can bid on whichever item
+
+#### Product ID
+* Must be randomly generated BEFORE Seller ID, as Buyers must bid on existing Products
+ 
+#### Seller ID
+* =INDEX(INDIRECT(CONCAT("'Item Data'!A2:A",COUNT('Item Data'!A:A)+1)), MATCH(D2, INDIRECT(CONCAT("'Item Data'!B2:B",COUNT('Item Data'!A:A)+1)),0))
+* Above formula essentially cross checks to match the Product ID with an existing Seller
+* There could be multiple Sellers selling the same product, but the MATCH() function will only find the first 1. This could be a problem!
+* However, this is still realistic as the first Seller to post the same item should have theirs bid on and sold first.
+
+#### Bid Date and Bid Time
+* Originally, bid dates and time were generated from a very large range.
+* But it doesn't make sense that auctions would run on for that long of a time frame if I generated dates and times from an entire year.
+* Here, I decided to make this dataset represent a snapshot of ONE MONTH of StockX's dataset.
+
+#### Bid Price
+* Before doing a random range bid range, I did some research on typical bid ranges for products (shown on "Sheet 11")
+* It seems bids often range from 60% to 100% of the ASK PRICE
+* This is generated AFTER Ask price
+
+#### Ask Price
+* =IF(COUNTIF(D:D, D2)>1, MAX(FILTER(H:H,D2 = D:D)), VLOOKUP(D2,'Product Data'!$A$2:$C$51,3) * (1+ RANDBETWEEN(25,75)/100))
+* Generated from a random markup between 25% to 75% of the RETAIL PRICE
+* This is typical given the nature and rarity of the products sold on the platform.
+* MORE PROBLEMS: Because it is randomly generated, there could be many different ask prices for the same Product.
+* This could make sense in real life, but on the anonymized platform, only ONE Ask Price is seen.
+* The formula checks if there are multiple instances of the same product being bid on (generated in a temporary "RNG" column, and it will keep the MAX Ask Price that the Buyers will see
 
 
 
