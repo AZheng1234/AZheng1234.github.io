@@ -86,7 +86,6 @@
 #### ID is very simple to make. I generated a random 4-digit number using the following formula:
 * =RANDBETWEEN(1,9999)
 * I used custom number formatting (B-0000 and S-0000) to indicate whether it was a Buyer or Seller ID.
-<br>
 
 #### Emails are slightly harder. There are infinite email addresses but a common pattern is first initial, last name, random number, @domain.
 * =CONCATENATE(INDEX('RNG (DELETE LATER)'!$G$1:$G$28, RANDBETWEEN(1,28)), INDEX('RNG (DELETE LATER)'!$E$2:$E$107, RANDBETWEEN(1,106)), RANDBETWEEN(10,999),INDEX('RNG (DELETE LATER)'!$D$2:$D$22, RANDBETWEEN(1,21)))
@@ -95,40 +94,28 @@
 * Generates random number
 * Draws random email domain
 
-<br>
-
 #### Phone number is simple. I generated a random 10-digit number using the following formula:
 * =RANDBETWEEN(1000000000, 9999999999)
 * Custom number formatting (###)-###-####
-
-<br>
 
 #### Alternate phone number is optional. Around 1/6 people have multiple phones.
 * IF(D2=1,CONCATENATE(LEFT(C2,6),RANDBETWEEN(100, 999),"-",RANDBETWEEN(1000,9999)), IFERROR(0/0))
 * If RANDBETWEEN(1,6) lands on 1, generate number, otherwise remains blank
 * Keeps zip code of main phone number, generates another random number
 
-<br>
-
 #### Street
 * =CONCATENATE(RANDBETWEEN(1,9999)," ",INDEX('RNG (DELETE LATER)'!$F$2:$F$301, RANDBETWEEN(1,300)))
 * Generate random number, draw street name from RNG sheet
 * Ex. 3910 Highland Avenue
 
-<br>
-
 #### State
 * Generated first before City, randomly draw from RNG sheet
-
-<br>
 
 #### City
 * =IF(G2 = 1, INDIRECT(CONCATENATE("'RNG (DELETE LATER)'!B", MATCH(I2, 'RNG (DELETE LATER)'!$A$2:$A$51)+1)), INDEX('RNG (DELETE LATER)'!$C$2:$C$401, RANDBETWEEN(1,400)))
 * Around 1/12 people live in a capital city. Of course, it differs by state but we will use an average for simplicity.
 * If RANDBETWEEN(1,12) lands on 1, draw ACCURATE state capital from RNG sheet
 * Otherwise, choose random city (may or may not be accurate)
-
-<br>
 
 #### Zip (randomly generated and not accurate)
 * =RANDBETWEEN(0,99950)
