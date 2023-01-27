@@ -9,9 +9,10 @@
 * SQL
 
 ### Contents
-[Entity-Relationship Diagram] (#ERD)
----
----
+* [Entity-Relationship Diagram](#erd)
+* [Creating the Dataset](#dataset)
+* [Continuing with Python](#python)
+* [SQL Queries](#sql)
 
 #### For those unfamilar with StockX, it is an anonymous online marketplace that mimics the stock market, except it sells luxury or limited edition sneakers, accessories, apparel, electronics, and more. StockX provides verification services to make sure products are genuine and not a cheap imitation, and earns commissions on sales.
 #### There is full transparency on ask prices, bid prices, and ask prices. There are even convenient visualizations on price history as well as your typical stock market data including:
@@ -22,10 +23,9 @@
 * number of sales
 * average sale price
 
-
+<a name = "erd"></a>
 ## Let's dive right in!
 ---
-### <a name = "ERD"></a>
 ### 1. The first step is to understand StockX's entity-relation diagram.
 
 <img src="./Images/ER Diagram.png">
@@ -44,6 +44,7 @@
 #### An Order is made when a Buyer makes a winning bid or when the Buyer meets the ask price.
 ####
 ---
+<a name = "dataset"></a>
 ### 2. Next, let's take a look at the tables in detail.
 
 #### Web scraping would have been the easiest way to collect the data, but having tried using Octoparse, I realized that the website (understandably so) protects itself from scraping programs. I will be making a sample database from SCRATCH. This is a good time to practice my spreadsheet skills!
