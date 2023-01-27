@@ -142,3 +142,4 @@
 * Retail Price
 
 #### For the products, I merely copy pasted a few products from the front page of the StockX website and pasted it into the spreadsheet. Of course, this still requires cleaning to make sure that the data is in the correct type and format.
+* Data cleaning shown on "Sheet 9" and "Sheet 10" of the spreadsheet
