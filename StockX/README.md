@@ -144,6 +144,8 @@
 #### For the products, I merely copy pasted a few products from the front page of the StockX website and pasted it into the spreadsheet. Of course, this still requires cleaning to make sure that the data is in the correct type and format.
 * Data cleaning shown on "Sheet 9" and "Sheet 10" of the spreadsheet
 
+<br>
+
 ### <ins> Items Table </ins>
 #### As mentioned previously, Items represent one specific iteration of a general Product. A logistic curve distribution was implemented to somewhat emulate reality in terms of how many products a Seller had. Many Sellers only had one item listed, a few less Sellers had two items listed, fewer Sellers had three items listed, and so on.
 #### Attributes/Columns:
@@ -153,5 +155,38 @@
 * Size
 * Order ID (Optional)
 * Final Sell Price (Optional)
+
+#### Seller ID
+* This was not completely** randomly generated. I followed the logistic curve plan illustrated in Columns J and K in the RNG sheet and ensured that every Seller had at least 1 item. (You wouldn't be a seller if you don't have any items for sale)
+* After the first 60 Items, I reintroduced randomness into the Items table. You will notice many NA's as the formulas try to match the data to empty rows.
+
+#### Product ID
+* Randomly picked out of the 50 Products
+
+#### Item ID
+* Randomly generated number from 1 to 100
+* Very small chance of matching Product AND Item ID, but this should do the trick for this small of a dataset
+
+#### Size
+* If Product ID is Shoe type, generate random number from 4-12 (most common range that I saw)
+* If Product ID is Apparel type, generate random size based on distribution in RNG sheet Column I
+
+#### Order ID and Final Sell Price
+* These 2 columns are OPTIONAL and will only be filled when a winning bid is made
+* Filling in these columns proved to be an extreme hassle for me to do in Google Sheets and I had to use Python to fill these in (more in next sections)
+
+<br>
+
+### <ins> Auction Table </ins>
+#### Attributes/Columns:
+* Buyer ID
+* Seller ID
+* Product ID
+* Bid Date
+* Bid Time
+* Bid Price
+* Ask Price
+
+
 
 
