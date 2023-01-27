@@ -132,3 +132,13 @@
 
 #### Zip (randomly generated and not accurate)
 * =RANDBETWEEN(0,99950)
+
+<br>
+
+### <ins> Products Table </ins>
+#### Attributes/Columns:
+* Product Name
+* Brand
+* Retail Price
+
+#### For the products, I merely copy pasted a few products from the front page of the StockX website and pasted it into the spreadsheet. Of course, this still requires cleaning to make sure that the data is in the correct type and format.
