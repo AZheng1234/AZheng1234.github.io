@@ -8,7 +8,7 @@
 * Python
 * SQL
 
-### Contents
+### Contents (click to skip to each section)
 * [Entity-Relationship Diagram](#erd)
 * [Creating the Dataset](#dataset)
 * [Continuing with Python](#python)
@@ -71,7 +71,7 @@
 * For apparel sizes, Medium will be the most common, Small and Large slightly less common, and the X sizes being the least common.
 
 
-### Buyer/Seller Tables
+### <ins> Buyer/Seller Tables </ins>
 #### As there are 6.5 million buyers on StockX and 1 million sellers, I decided to maintain the 6.5:1 ratio. 130 Buyers and 20 Sellers should do!
 #### Attributes/Columns:
 * ID
@@ -107,6 +107,8 @@
 * IF(D2=1,CONCATENATE(LEFT(C2,6),RANDBETWEEN(100, 999),"-",RANDBETWEEN(1000,9999)), IFERROR(0/0))
 * If RANDBETWEEN(1,6) lands on 1, generate number, otherwise remains blank
 * Keeps zip code of main phone number, generates another random number
+
+<br>
 
 #### Street
 * =CONCATENATE(RANDBETWEEN(1,9999)," ",INDEX('RNG (DELETE LATER)'!$F$2:$F$301, RANDBETWEEN(1,300)))
