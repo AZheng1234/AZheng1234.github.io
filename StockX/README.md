@@ -143,3 +143,15 @@
 
 #### For the products, I merely copy pasted a few products from the front page of the StockX website and pasted it into the spreadsheet. Of course, this still requires cleaning to make sure that the data is in the correct type and format.
 * Data cleaning shown on "Sheet 9" and "Sheet 10" of the spreadsheet
+
+### <ins> Items Table </ins>
+#### As mentioned previously, Items represent one specific iteration of a general Product. A logistic curve distribution was implemented to somewhat emulate reality in terms of how many products a Seller had. Many Sellers only had one item listed, a few less Sellers had two items listed, fewer Sellers had three items listed, and so on.
+#### Attributes/Columns:
+* Seller ID
+* Product ID
+* Item ID
+* Size
+* Order ID (Optional)
+* Final Sell Price (Optional)
+
+
