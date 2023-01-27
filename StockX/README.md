@@ -117,7 +117,7 @@
 * If RANDBETWEEN(1,12) lands on 1, draw ACCURATE state capital from RNG sheet
 * Otherwise, choose random city (may or may not be accurate)
 
-#### Zip (randomly generated and not accurate)
+#### Zip (randomly generated and not accurate to the actual location)
 * =RANDBETWEEN(0,99950)
 
 <br>
