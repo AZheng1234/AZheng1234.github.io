@@ -206,5 +206,29 @@
 * This could make sense in real life, but on the anonymized platform, only ONE Ask Price is seen.
 * The formula checks if there are multiple instances of the same product being bid on (generated in a temporary "RNG" column, and it will keep the MAX Ask Price that the Buyers will see
 
+<br>
+
+### <ins> Orders Table </ins>
+#### Attributes/Columns:
+* Order ID	
+* Buyer ID	
+* Order Date	
+* Subtotal	
+* Processing Fee	
+* Shipping Fee	Sales 
+* Tax	
+* Order Total
+
+#### This is our final table, but it doesn't get easier! An Order row being inserted into this table means that a winning bid was made on a specific Product/Seller pair. But because I couldn't find a function that looks at unique pairs between multiple columns, I had to create temporary columns as identifiers in the Items and Auction tables. I concatenated columns to create identifiers (SP Combo, BSP Combo, SP + Bid Price Combo, etc)
+
+#### Because I was using formulas to generate numbers, updating cells or pressing "Enter" would change the entire dataset each time. Not only is it an eyesore, it's difficult to make sense of what's going on. I exported a STATIC dataset in order to understand it better.
+
+#### If you view the Items sheet (everything past Column H), you will see my annoyances with spreadsheets.
+* WHY IS THE MATCH FUNCTION SO F###### ANNOYING?!?!
+* For some reason, it could not match the all identifiers and returns NA for many of them, DESPITE me manually verifying that they exist (with Ctrl + F)
+* Playing with data types and trying 100 different things wasn't working
+
+<a name = "python" </a>
+## Switching to Python!!!
 
 
