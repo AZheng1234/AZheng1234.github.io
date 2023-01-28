@@ -279,8 +279,6 @@
 
 ### This final stretch for completing the dataset had a few more problems that I don't fully remember the details about. All I remember is that the formulas were not properly retrieving order totals, Buyer ID, Order ID, etc. I had to manually input some of the data in order to complete the Orders table. There were EVEN MORE annoyances when it came to importing it into XAMPP to use SQL with data types, table names, creating tables, etc, but I won't go into detail :)
 
-### Thanks for making it this far into reading about my project. A LOT of effort and headache went into this when it was just supposed to be a SQL focused project for Database Management. There may be some logical flaws that I haven't caught when I did this project, but I wanted to make it AS ACCURATE AS POSSIBLE to the real deal. For funsies :) In any case, I learned a lot!
-
 <br>
 
 <a name ="sql"></a>
@@ -292,4 +290,5 @@
 #### If you want to explore my dataset more, I have attached my SQL dump file below:
 [SQL Dump File](https://github.com/AZheng1234/AZheng1234.github.io/blob/main/StockX/SQL%20Dump%20File.sql)
 
-## This is the end! Thanks again for reading about my project!
+### This is the end! Thanks for reading about my project and making it this far! I hope you found it somewhat interesting at least. 
+### A LOT of effort and headache went into this when it was just supposed to be a SQL focused project for Database Management. There may be some logical flaws that I haven't caught when I did this project, but I wanted to make it AS ACCURATE AS POSSIBLE to the real deal. For funsies :) In any case, I learned a lot!
