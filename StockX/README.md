@@ -122,6 +122,7 @@
 
 #### City
 <img src= "https://i.pinimg.com/originals/d5/80/53/d580532b5bbfc94cb6cabe0b2ba04506.jpg" width = "300">
+
 * =IF(G2 = 1, INDIRECT(CONCATENATE("'RNG (DELETE LATER)'!B", MATCH(I2, 'RNG (DELETE LATER)'!$A$2:$A$51)+1)), INDEX('RNG (DELETE LATER)'!$C$2:$C$401, RANDBETWEEN(1,400)))
 * Around 1/12 people live in a capital city. Of course, it differs by state but we will use an average for simplicity.
 * If RANDBETWEEN(1,12) lands on 1, draw ACCURATE state capital from RNG sheet
