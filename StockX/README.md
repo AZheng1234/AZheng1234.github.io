@@ -67,10 +67,11 @@
 * 100 last names (from which usernames was made)
 * Apparel sizes (S/M/L/XS/XL/XXL)
 
-##### If you view the RNG sheet, you will notice that the email domains and apparel sizes will be listed more than once at different frequencies. 
+#### If you view the RNG sheet, you will notice that the email domains and apparel sizes will be listed more than once at different frequencies. 
 * For emails, this is to simulate popularity of the domain, with Gmail, Yahoo, and Outlook being much more popular than domains such as AOL, iCloud, and ATT. 
 * For apparel sizes, Medium will be the most common, Small and Large slightly less common, and the X sizes being the least common.
 
+<br>
 
 ### <ins> Buyer/Seller Tables </ins>
 #### As there are 6.5 million buyers on StockX and 1 million sellers, I decided to maintain the 6.5:1 ratio. 130 Buyers and 20 Sellers should do!
@@ -120,6 +121,7 @@
 * Generated first before City, randomly draw from RNG sheet
 
 #### City
+<img src= "https://i.pinimg.com/originals/d5/80/53/d580532b5bbfc94cb6cabe0b2ba04506.jpg" width = "300">
 * =IF(G2 = 1, INDIRECT(CONCATENATE("'RNG (DELETE LATER)'!B", MATCH(I2, 'RNG (DELETE LATER)'!$A$2:$A$51)+1)), INDEX('RNG (DELETE LATER)'!$C$2:$C$401, RANDBETWEEN(1,400)))
 * Around 1/12 people live in a capital city. Of course, it differs by state but we will use an average for simplicity.
 * If RANDBETWEEN(1,12) lands on 1, draw ACCURATE state capital from RNG sheet
