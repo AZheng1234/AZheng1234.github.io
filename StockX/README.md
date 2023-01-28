@@ -287,7 +287,9 @@
 ## Time for SQL!!!
 
 #### I created a list of questions and SQL queries that I thought would be useful/interesting insights!
+[SQL Questions](https://github.com/AZheng1234/AZheng1234.github.io/blob/main/StockX/SQL%20Questions.pdf)
 
-
+#### If you want to explore my dataset more, I have attached my SQL dump file below:
+[SQL Dump File](https://github.com/AZheng1234/AZheng1234.github.io/blob/main/StockX/SQL%20Dump%20File.sql)
 
 ## This is the end! Thanks again for reading about my project!
