@@ -229,7 +229,7 @@
 
 ### <ins> Orders Table </ins>
 
-<img src="./Images/Orders.PNG" width = "500"/> 
+<img src="./Images/Order.PNG" width = "500"/> 
 
 #### Attributes/Columns:
 * Order ID	
