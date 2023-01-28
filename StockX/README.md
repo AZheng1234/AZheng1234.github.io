@@ -74,7 +74,10 @@
 ### <ins> Buyer/Seller Tables </ins>
 #### As there are 6.5 million buyers on StockX and 1 million sellers, I decided to maintain the 6.5:1 ratio. 130 Buyers and 20 Sellers should do!
 
-<h3><img align="center" height="30" src="./Images/Buyer.PNG"> TECHNOLOGIES</h3>
+<p float="left">
+  <img src="./Images/Buyer.PNG" width="100" />
+  <img src=".Images/Seller.PNG" width="100" /> 
+</p>
 
 
 #### Attributes/Columns:
