@@ -218,6 +218,7 @@
 #### Bid Date and Bid Time
 * Originally, bid dates and time were generated from a very large range.
 * But it doesn't make sense that auctions would run on for that long of a time frame if I generated dates and times from an entire year.
+* Bids could potentially occur on same item that is months apart.
 * Here, I decided to make this dataset represent a snapshot of ONE MONTH of StockX's dataset.
 
 #### Bid Price
