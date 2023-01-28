@@ -31,6 +31,7 @@
 <img src="./Images/ER Diagram.png">
 
 ### To briefly explain the ER diagram, the main entities to take into account are the buyers, sellers, and the products.
+### NOTE: Not all columns will appear on the diagram as it does not include foreign keys.
 
 
 #### The Auction entity is the associative entity created by the relationship between the 3 main entities.
@@ -140,6 +141,8 @@
 
 #### For the products, I merely copy pasted a few products from the front page of the StockX website and pasted it into the spreadsheet. Of course, this still requires cleaning to make sure that the data is in the correct type and format.
 * Data cleaning shown on "Sheet 9" and "Sheet 10" of the spreadsheet
+
+#### Shoes and Apparel are also separate tables that contain Product ID and Product Type. Not much to talk about for these tables.
 
 <br>
 
