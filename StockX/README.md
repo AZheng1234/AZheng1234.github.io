@@ -260,7 +260,9 @@
 <br>
 
 <a name = "python"></a>
-## Switching to Python!!!
+<img align="right" src="https://www.teeltech.com/wp-content/uploads/2013/06/python-logo-glassy.png" width = "100">
+
+## Switching to Python!!! 
 
 #### I documented my process of completing the dataset with Python in Jupyter Notebook. Please right click the following link and view in a different tab.
 #### [Completing Dataset in Python](https://github.com/AZheng1234/AZheng1234.github.io/blob/main/StockX/Auction-Item%20Data.ipynb)
@@ -314,6 +316,7 @@
 <br>
 
 <a name ="sql"></a>
+<img align = right src = "https://w7.pngwing.com/pngs/170/924/png-transparent-microsoft-sql-server-microsoft-azure-sql-database-microsoft-text-logo-microsoft-azure.png" width = "100">
 ## Time for SQL!!!
 
 #### I created a list of questions and SQL queries that I thought would be useful/interesting insights!
