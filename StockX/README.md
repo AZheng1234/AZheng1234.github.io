@@ -279,6 +279,9 @@
 
 ### This final stretch for completing the dataset had a few more problems that I don't fully remember the details about. All I remember is that the formulas were not properly retrieving order totals, Buyer ID, Order ID, etc. I had to manually input some of the data in order to complete the Orders table. There were EVEN MORE annoyances when it came to importing it into XAMPP to use SQL with data types, table names, creating tables, etc, but I won't go into detail :)
 
+#### Here is the final completed dataset! (static, no formulas, values only)
+[StockX Completed Dataset](https://docs.google.com/spreadsheets/d/1DHW1f13lUfL05oVN4cEC2_2wLdL_fINWHcSfVM5Tlvc/edit?usp=sharing)
+
 <br>
 
 <a name ="sql"></a>
