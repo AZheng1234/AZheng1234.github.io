@@ -31,8 +31,9 @@
 <img src="./Images/ER Diagram.png">
 
 ### To briefly explain the ER diagram, the main entities to take into account are the buyers, sellers, and the products.
-### NOTE: Not all columns will appear on the diagram as it does not include foreign keys.
+#### NOTE: Not all columns will appear on the diagram as it does not include foreign keys.
 
+<br>
 
 #### The Auction entity is the associative entity created by the relationship between the 3 main entities.
 * AKA ternary relationship where many Buyers can buy many Products from many Sellers.
