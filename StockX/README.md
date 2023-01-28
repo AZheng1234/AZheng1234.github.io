@@ -53,7 +53,7 @@
 #### Where should we start?
 #### If you want to view the full dataset, open the following link in a new tab.
 #### [StockX Project Data](https://docs.google.com/spreadsheets/d/1VxAQSSVYZIjkwwO6W6RQ8l1BCVW3h5S1h9pl-n1kexs/edit?usp=sharing)
-#### You will be able to view all of the complex formulas I spent un unnecessary amount of time writing to make this dataset! :D
+#### You will be able to view all of the complex formulas I spent an unnecessary amount of time writing to make this dataset! :D
 
 #### A RNG sheet is included from which I randomly draw data from to create the attributes for other tables. The sheet includes:
 * List of all 50 states
@@ -73,6 +73,9 @@
 
 ### <ins> Buyer/Seller Tables </ins>
 #### As there are 6.5 million buyers on StockX and 1 million sellers, I decided to maintain the 6.5:1 ratio. 130 Buyers and 20 Sellers should do!
+
+<h3><img align="center" height="30" src="./Images/Buyers.PNG"> TECHNOLOGIES</h3>
+
 #### Attributes/Columns:
 * ID
 * Email
