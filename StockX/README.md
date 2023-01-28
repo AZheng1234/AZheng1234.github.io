@@ -109,7 +109,7 @@
 * Custom number formatting (###)-###-####
 
 #### Alternate phone number is optional. Around 1/6 people have multiple phones.
-* IF(D2=1,CONCATENATE(LEFT(C2,6),RANDBETWEEN(100, 999),"-",RANDBETWEEN(1000,9999)), IFERROR(0/0))
+* =IF(D2=1,CONCATENATE(LEFT(C2,6),RANDBETWEEN(100, 999),"-",RANDBETWEEN(1000,9999)), IFERROR(0/0))
 * If RANDBETWEEN(1,6) lands on 1, generate number, otherwise remains blank
 * Keeps zip code of main phone number, generates another random number
 
