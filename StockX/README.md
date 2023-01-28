@@ -224,7 +224,7 @@
 #### Because I was using formulas to generate numbers, updating cells or pressing "Enter" would change the entire dataset each time. Not only is it an eyesore, it's difficult to make sense of what's going on. I exported a STATIC dataset in order to understand it better.
 
 #### If you view the Items sheet (everything past Column H), you will see my annoyances with spreadsheets.
-* WHY IS THE MATCH FUNCTION SO F###### ANNOYING?!?!
+* WHY IS THE MATCH FUNCTION SO F****** ANNOYING?!?!
 * For some reason, it could not match the all identifiers and returns NA for many of them, DESPITE me manually verifying that they exist (with Ctrl + F)
 * Playing with data types and trying 100 different things wasn't working
 
