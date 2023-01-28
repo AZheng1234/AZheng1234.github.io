@@ -131,7 +131,7 @@
 
 ### <ins> Products Table </ins>
 
-<img src="./Images/Products.PNG" width = "500"/> 
+<img src="./Images/Product.PNG" width = "500"/> 
 
 #### Attributes/Columns:
 * Product Name
@@ -145,7 +145,7 @@
 
 ### <ins> Items Table </ins>
 
-<img src="./Images/Items.PNG" width = "500"/> 
+<img src="./Images/Item.PNG" width = "500"/> 
 
 #### As mentioned previously, Items represent one specific iteration of a general Product. A logistic curve distribution was implemented to somewhat emulate reality in terms of how many products a Seller had. Many Sellers only had one item listed, a few less Sellers had two items listed, fewer Sellers had three items listed, and so on.
 #### Attributes/Columns:
