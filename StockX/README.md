@@ -75,8 +75,8 @@
 #### As there are 6.5 million buyers on StockX and 1 million sellers, I decided to maintain the 6.5:1 ratio. 130 Buyers and 20 Sellers should do!
 
 <p float="left">
-  <img src="./Images/Buyer.PNG"/>
-  <img src=".Images/Sellers.PNG"/> 
+  <img src="./Images/Buyer.PNG" width = "400"/>
+  <img src="./Images/Seller.PNG" width = "500"/> 
 </p>
 
 
@@ -130,6 +130,7 @@
 <br>
 
 ### <ins> Products Table </ins>
+<img src="./Images/Products.PNG" width = "500"/> 
 #### Attributes/Columns:
 * Product Name
 * Brand
@@ -141,6 +142,7 @@
 <br>
 
 ### <ins> Items Table </ins>
+<img src="./Images/Items.PNG" width = "500"/> 
 #### As mentioned previously, Items represent one specific iteration of a general Product. A logistic curve distribution was implemented to somewhat emulate reality in terms of how many products a Seller had. Many Sellers only had one item listed, a few less Sellers had two items listed, fewer Sellers had three items listed, and so on.
 #### Attributes/Columns:
 * Seller ID
@@ -172,6 +174,7 @@
 <br>
 
 ### <ins> Auction Table </ins>
+<img src="./Images/Auction.PNG" width = "500"/> 
 #### Attributes/Columns:
 * Buyer ID
 * Seller ID
@@ -216,6 +219,7 @@
 <br>
 
 ### <ins> Orders Table </ins>
+<img src="./Images/Orders.PNG" width = "500"/> 
 #### Attributes/Columns:
 * Order ID	
 * Buyer ID	
