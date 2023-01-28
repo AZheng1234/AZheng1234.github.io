@@ -316,7 +316,7 @@
 <br>
 
 <a name ="sql"></a>
-<img align = right src = "https://w7.pngwing.com/pngs/170/924/png-transparent-microsoft-sql-server-microsoft-azure-sql-database-microsoft-text-logo-microsoft-azure.png" width = "100">
+<img align = right src = "https://techcommunity.microsoft.com/t5/image/serverpage/image-id/371852iB18F72B525B661CF" width = "100">
 ## Time for SQL!!!
 
 #### I created a list of questions and SQL queries that I thought would be useful/interesting insights!
