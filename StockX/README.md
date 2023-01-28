@@ -155,7 +155,7 @@
 <img src="./Images/Item.PNG" width = "500"/> 
 
 #### As mentioned previously, Items represent one specific iteration of a general Product. A logistic curve distribution was implemented to somewhat emulate reality in terms of how many products a Seller had. Many Sellers only had one item listed, a few less Sellers had two items listed, fewer Sellers had three items listed, and so on.
-<img src = "./Images/Item.PNG" width = "500"/>
+<img src = "./Images/Log.PNG" width = "500"/>
 
 
 #### Attributes/Columns:
