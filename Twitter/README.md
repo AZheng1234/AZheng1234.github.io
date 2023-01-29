@@ -1,8 +1,10 @@
+### GITHUB PAGE-IN PROGRESS
+### Project is complete but currently editing Readme file
+
 <p float="left">
   <img src="./Images/Tesla Logo.png" width = "400"/>
   <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4n_urpJ9XpwOTdzBVbGvactwHrPagYQrTJPYjxfxLGkSyu7nJZVqRVGAeohnPgKMrnKE&usqp=CAU" width = "175px" height = "150px"/> 
 </p>
-
 
 ## Hi! Welcome to my project about predicting stock prices with social media. 
 ### I'll walk you through my process of exploring the relationship between Elon Musk's Tweets and TSLA stock price.
