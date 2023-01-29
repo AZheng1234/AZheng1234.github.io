@@ -57,7 +57,7 @@ I recently became extremely interested in investing and the results of this proj
 
 <p float="left">
 <img src = "https://live-production.wcms.abc-cdn.net.au/403a354bce1611209de535709efbf2dc?impolicy=wcms_crop_resize&cropH=642&cropW=1141&xPos=26&yPos=0&width=862&height=485" width = "400">
-<img src = "https://thehustle.co/wp-content/uploads/2022/11/HS-News-Brief_2022-11-15T004910.531Z-1024x1024.png">
+<img src = "https://thehustle.co/wp-content/uploads/2022/11/HS-News-Brief_2022-11-15T004910.531Z-1024x1024.png" width = "300">
  </p>
 
 #### Effect: $15 Billion loss in market capitalization and Eli Lilly left Twitter platform
