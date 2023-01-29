@@ -32,3 +32,8 @@
 
 ### If you would rather read a more formal paper, you can read it using the link below. You will have to download to view the docx file.
 ### [Formal Report](https://github.com/AZheng1234/AZheng1234.github.io/blob/main/Twitter/Report.docx)
+
+<br>
+
+<a name = "intro"></a>
+## <ins> Introduction and Purpose of Project </ins>
