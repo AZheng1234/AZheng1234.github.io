@@ -54,3 +54,4 @@ I recently became extremely interested in investing and the results of this proj
 ### Recent Examples
 
 [Eli Lilly and Fake Tweet](https://www.fiercepharma.com/marketing/eli-lilly-hit-new-twitter-blue-fake-account-forced-apologize-over-free-insulin-tweet)
+<img src = "https://live-production.wcms.abc-cdn.net.au/403a354bce1611209de535709efbf2dc?impolicy=wcms_crop_resize&cropH=642&cropW=1141&xPos=26&yPos=0&width=862&height=485">
