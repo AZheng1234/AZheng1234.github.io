@@ -1,0 +1,371 @@
+#######################################################
+# Name: Aaron Zheng
+# MGT 4803 Business Analytics II
+# Final Project
+#######################################################
+
+## Setting Up All Libraries and Setting Working Directory
+```{r}
+library(dplyr)
+library(ggplot2)
+library(caret)
+library(ROCR)
+library(car)
+library(corrplot)
+library(MASS)
+library(leaps)
+setwd("C:/Users/AZhen/OneDrive/GA Tech Fall 2022/MGT 4803 Business Analytics II")
+```
+
+
+## Importing Dataset and Formatting/Cleaning Data
+```{r}
+tweets <- read.csv("MAX Tweets.csv")
+str(tweets)
+tweets$nlikes <- as.integer(gsub(",","",tweets$nlikes))
+tweets$nreplies <- as.integer(gsub(",","",tweets$nreplies))
+tweets$nretweets <- as.integer(gsub(",","",tweets$nretweets))
+
+#Removing unnecessary columns
+tweets <- subset(tweets,select = -c(2,3))
+
+#Using Date column as index and removing Date column
+rownames(tweets) <- tweets$Date
+tweets <- subset(tweets,select = -c(1))
+```
+
+
+## Checking correlation matrix before running regressions
+```{r}
+corrplot(cor(tweets))
+```
+
+
+
+# LINEAR REGRESSIONS
+########################################################################################################
+
+```{r}
+#linear regression with all variables
+linear_regression <- lm(TSLA.Change ~ nlikes +nreplies + nretweets + Hour + X5.Day.Momentum + X10.Day.Momentum 
+                        + NASDAQ.Change + DJIA.Change + S.P.500.Change + XLK.Change + Monday + Tuesday 
+                        + Wednesday + Thursday + Friday + AVG.Sentiment + SUM.Sentiment, data = tweets)
+
+summary(linear_regression)
+vif(linear_regression)
+```
+
+
+
+## Testing hypothesis: does ignoring unpopular tweets make the model more accurate?
+## Base R-Squared: 0.3209
+
+## Goal of below for loop: Find cutoff range of tweet popularity where variables are still significant. Maximize Adjusted R-Squared.
+
+```{r}
+maxrsquared = 0
+
+for (x in 0:1500) {
+  populartweets <- tweets[tweets$nlikes > x*100,]
+  popularlinear_regression <- lm(TSLA.Change ~ normalized.nlikes + normalized.nreplies + normalized.nretweets
+                                 + Day + Hour + X5.Day.Momentum + X10.Day.Momentum + NASDAQ.Change + DJIA.Change
+                                 + S.P.500.Change + XLK.Change + Monday + Tuesday + Wednesday + Thursday + Friday
+                                 + AVG.Sentiment + SUM.Sentiment, data = populartweets)
+   
+  #ends for loop if no variables are significant anymore
+  #sigcount = sum(summary(popularlinear_regression)$coefficients[,4] <= 0.001)
+  if((sum(summary(popularlinear_regression)$coefficients[,4] <= 0.001)) < 1){
+    break}
+  
+  maxr = summary(popularlinear_regression)$adj.r.squared
+ 
+  
+  #replaces old max with new max
+   if(maxr > maxrsquared){
+    maxrsquared = maxr}
+ 
+}
+nlikecap <- (x-1)*100
+```
+
+
+## The maximum nlike cutoff before no variables were significant at the p-value <= 0.001 level was 50,600 likes.
+## R-squared of this model including all variables is 0.4778
+```{r}
+populartweets <- tweets[tweets$nlikes > 50600,]
+popularlinear_regression <- lm(TSLA.Change ~ normalized.nlikes + normalized.nreplies + normalized.nretweets
+                               + Day + Hour + X5.Day.Momentum + X10.Day.Momentum + NASDAQ.Change + DJIA.Change
+                               + S.P.500.Change + XLK.Change + Monday + Tuesday + Wednesday + Thursday + Friday
+                               + AVG.Sentiment + SUM.Sentiment, data = populartweets)
+
+summary(popularlinear_regression)
+```
+
+
+
+
+## BELOW IS WHAT I ATTEMPTED BEFORE I REALIZED I WAS MANUALLY DOING A STEPWISE REGRESSION
+
+
+
+## Retrieve column names
+## Discard dependent variables, integer nlikes,nreplies,nretweets, AND normalized.replies, normalized.nretweets
+## normalized.nlikes is enough
+```{r}
+columnnames <- colnames(tweets)
+columnnames <- columnnames[-c(1,2,3,4,5,7,8)]
+```
+
+## Create grid of all combinations of the remaining 16 variables, keep all combos with more than 2 variables.
+## AKA Variable Data Frame
+```{r}
+vardf <- as.data.frame(expand.grid(0:1, 0:1, 0:1, 0:1, 0:1, 0:1, 0:1, 0:1, 0:1, 0:1, 0:1, 0:1, 0:1, 0:1, 0:1, 0:1))
+vardf$rowsums <- rowSums(vardf)
+vardf <- vardf[vardf$rowsums > 2,]
+```
+
+
+## Loop through all possible combos to verify the maximum adjusted R-Squared.
+## THIS WILL TAKE A WHILE
+## If you refresh the environment while this is running, you can see where iterator "i" is at out of 65399 possible combinations.
+```{r}
+loopmaxr= 0
+loopmaxi = 0
+
+#Outer loop: loop through variable combo grid rows
+for(i in 1:nrow(vardf)) {
+ 
+  reg_formula = ""
+  vars = ""
+  x = 0
+  
+  #for each row, create formula based on selected variables
+  for(x in 2:length(vardf[i,])-1){
+    #print(x)
+    if (isTRUE(vardf[i,x] == 1)){
+      reg_formula = paste(reg_formula, columnnames[x], sep = " + ")
+    }
+  }
+  vars = substring(reg_formula,3)
+  fullequ = paste("TSLA.Change ~ ", vars, sep = "")
+  loop_regression <- lm(as.formula(fullequ), data = tweets)
+  
+  #gets max R-squared and Row
+  if (summary(loop_regression)$adj.r.squared > loopmaxr){
+    loopmaxr = summary(loop_regression)$adj.r.squared
+    loopmaxi = i
+    }
+}
+```
+
+
+## Combination of variables for maximum adjusted R-squared
+* X5.Day.Momentum
+* X10.Day.Momentum
+* NASDAQ.Change
+* DJIA.Change
+* S.P.500.Change
+* Tuesday
+* Wednesday
+* Thursday
+* Friday
+* SUM.Sentiment
+
+```{r}
+vardf[loopmaxi,]
+
+for (i in 1:length(columnnames)){
+  print(paste(i, columnnames[i]))
+}
+```
+
+# Stepwise version 1
+## Only difference in above result is BELOW does not include 10-Day momentum variable
+```{r}
+stepwise1 <- stepAIC(linear_regression, direction = "both", 
+                      trace = FALSE)
+summary(stepwise1)
+```
+
+# Stepwise version 2
+```{r}
+stepwisetweets <- subset(tweets, select = -c(1))
+stepwise2 <- regsubsets(TSLA.Change~., data = stepwisetweets, nvmax = 21,
+                     method = "seqrep")
+summary(stepwise2)
+```
+
+
+## Discard all non-significant variables for simplest regression model
+## R-Squared: 0.3082
+## Only MINIMAL loss in R-squared with 3 variable model
+```{r}
+simplest_regression <- lm(TSLA.Change~X5.Day.Momentum
+                        + NASDAQ.Change + S.P.500.Change, data = tweets)
+
+
+summary(simplest_regression)
+
+
+
+print("Difference between Max and Simple models:")
+print(loopmaxr - summary(simplest_regression)$adj.r.squared)
+```
+
+## Take #2 with Simplest Regression Model
+
+## Testing hypothesis: does ignoring unpopular tweets make the model more accurate?
+## Goal of below for loop: Find cutoff range of tweet popularity where variables are still significant. Maximize Adjusted R-Squared.
+```{r}
+maxrsquared2 = 0
+
+for (y in 1:1500) {
+  #print(y)
+  simppoptweets <- tweets[tweets$nlikes > y*100,]
+  simplepopular <- lm(TSLA.Change ~ X5.Day.Momentum
+                  + NASDAQ.Change + S.P.500.Change, data = simppoptweets)
+  
+  #Sys.sleep(0.2)
+  
+  #ends for loop if no variables are significant anymore
+  #sigcount2 = sum(summary(simplepopular)$coefficients[,4] <= 0.001)
+  if((sum(summary(simplepopular)$coefficients[,4] <= 0.001)) < 1){
+    break}
+  
+  maxr2 = summary(simplepopular)$adj.r.squared
+  
+  
+  #replaces old max with new max
+  if(maxr2 > maxrsquared2){
+    maxrsquared2 = maxr2}
+}
+nlikecap2 = (y-1) *100
+```
+
+
+
+
+#The maximum nlike cutoff before no variables were significant at the p-value <= 0.001 level was 54,600 likes.
+#R-Squared: 0.3756
+```{r}
+simppoptweets <- tweets[tweets$nlikes > 54600,]
+simplepopular <- lm(TSLA.Change ~ X5.Day.Momentum
+                    + NASDAQ.Change + S.P.500.Change, data = simppoptweets)
+
+summary(simplepopular)
+```
+
+
+
+
+# LOGISTIC REGRESSIONS
+########################################################################################################
+
+#Splitting data into training and validation sets 70/30 split
+```{r}
+set.seed(123)
+tweets2<- tweets[sample(1:nrow(tweets)), ]
+training <- tweets2[1:846,]
+validation <- tweets2[847:1209,]
+
+
+log_regression <- glm(TSLA.Up ~ nlikes +nreplies + nretweets + Hour + X5.Day.Momentum + X10.Day.Momentum 
+                        + NASDAQ.Change + DJIA.Change + S.P.500.Change + XLK.Change + Monday + Tuesday 
+                        + Wednesday + Thursday + Friday + AVG.Sentiment + SUM.Sentiment, data = training, family = "binomial")
+
+summary(log_regression)
+```
+
+
+
+## loops through 0.01 to 0.97 to find cutoff with lowest misclassification rate
+## Base misclass rate at 0.52 cutoff: 0.3223
+```{r}
+min_misclassrate = 1
+for (i in seq(0.01,0.97,by = 0.01)){
+  validation2 <- data.frame(validation)
+  validation2$Pred <- predict(log_regression, newdata = validation, type = "response")
+  validation2 <- mutate(validation2, Prediction = ifelse(Pred > i, 1,0))
+  conf <- confusionMatrix(as.factor(validation2$TSLA.Up), as.factor(validation2$Prediction))
+  (conf$table[1,2] + conf$table[2,1])/1209
+  if((conf$table[1,2] + conf$table[2,1])/1209 < min_misclassrate){
+    min_misclassrate <- (conf$table[1,2] + conf$table[2,1])/1209
+    print(i)
+  }
+}
+```
+## Comparing with logit with all variables vs simple logit model
+```{r}
+set.seed(123)
+validation2 <- data.frame(validation)
+  validation2$Pred <- predict(log_regression, newdata = validation, type = "response")
+  validation2 <- mutate(validation2, Prediction = ifelse(Pred > 0.52, 1,0))
+  confusionMatrix(as.factor(validation2$TSLA.Up), as.factor(validation2$Prediction))
+```
+
+```{r}
+simple_logit <- glm(TSLA.Up ~ X5.Day.Momentum + 
+                        + NASDAQ.Change + S.P.500.Change, data = tweets, family = "binomial")
+validation2 <- data.frame(validation)
+validation2$Pred <- predict(simple_logit, newdata = validation, type = "response")
+validation2 <- mutate(validation2, Prediction = ifelse(Pred > 0.52, 1,0))
+confusionMatrix(as.factor(validation2$TSLA.Up), as.factor(validation2$Prediction))
+```
+
+
+
+## What cutoff to get at least 80% accuracy for guessing that TSLA stock goes up?
+## cutoff = 0.75 prediction value
+```{r}
+validation2 <- mutate(validation2, Prediction = ifelse(Pred > 0.52, 1,0))
+validation3 <- validation2[validation2$Pred>0.75,]
+#length(validation3[validation3$nlikes>50000,])
+sum(validation3$TSLA.Up)/length(validation3$TSLA.Up)
+```
+
+
+## Compare characteristics with overall dataset
+```{r}
+print("5-Day Momentum:")
+paste("Overall mean: ",mean(tweets$X5.Day.Momentum))
+paste("High Prediction mean: ",mean(validation3$X5.Day.Momentum))
+paste(round(abs(mean(validation3$X5.Day.Momentum)/mean(tweets$X5.Day.Momentum)),2), "times higher")
+print("------------")
+
+print("NASDAQ Change:")
+paste("Overall mean: ",mean(tweets$NASDAQ.Change))
+paste("High Prediction mean: ",mean(validation3$NASDAQ.Change))
+paste(round(abs(mean(validation3$NASDAQ.Change)/mean(tweets$NASDAQ.Change)),2), "times higher")
+print("------------")
+
+print("DJIA Change:")
+paste("Overall mean: ",mean(tweets$DJIA.Change))
+paste("High Prediction mean: ",mean(validation3$DJIA.Change))
+paste(round(abs(mean(validation3$DJIA.Change)/mean(tweets$DJIA.Change)),2), "times higher")
+print("------------")
+
+print("S&P500 Change:")
+paste("Overall mean: ",mean(tweets$S.P.500.Change))
+paste("High Prediction mean: ",mean(validation3$S.P.500.Change))
+paste(round(abs(mean(validation3$S.P.500.Change)/mean(tweets$S.P.500.Change)),2), "times higher")
+```
+
+## 5-Day Momentum:
+### Overall mean:  0.0199284900496278
+### High Prediction mean:  0.153928457254902
+#### ~7.72 times higher than average
+# ---
+## NASDAQ Change:"
+### Overall mean:  0.000291620835401158
+### High Prediction mean:  0.0110923543137255
+### ~38.04 times higher than average
+# ---
+## DJIA Change:
+### Overall mean:  -0.000121582043010753
+### High Prediction mean:  0.0051620231372549
+### ~42.46 times higher than average
+# ---
+## S&P500 Change:
+### Overall mean:  -0.000176676575682382
+### High Prediction mean:  0.00634989274509804
+### ~35.94 times higher than average
