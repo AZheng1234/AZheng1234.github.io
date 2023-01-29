@@ -61,3 +61,23 @@ I recently became extremely interested in investing and the results of this proj
  </p>
 
 #### Effect: $15 Billion loss in market capitalization and Eli Lilly left Twitter platform
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a name = "dataset"></a>
+## <ins> Dataset Sources </ins>
+My original unrefined data source can be found on Kaggle in the link below:
+
+### [Kaggle Dataset](https://www.kaggle.com/datasets/vidyapb/elon-musk-tweets-2015-to-2020?resource=download)
