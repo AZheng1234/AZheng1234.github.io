@@ -25,8 +25,9 @@
 ### If you don't want to read about the details on Github, here is a video I made for this project.
 <br>
 
-<img src = "./Images/Video.PNG" width = "700">
+[<img src="./Images/Video.PNG" width = "700">](https://youtu.be/PrgOsxHKx6Y) 
 
 <br>
 
-### If you would rather read a more formal paper, you can read it here:
+### If you would rather read a more formal paper, you can read it using the link below. You will have to download to view the docx file.
+### [Formal Report](https://github.com/AZheng1234/AZheng1234.github.io/blob/main/Twitter/Report.docx)
