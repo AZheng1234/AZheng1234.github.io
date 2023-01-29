@@ -15,11 +15,10 @@
 
 ### Contents (click to skip to each section)
 * [15-minute Video Summary](#video)
-* [Creating the Dataset](#dataset)
-* [Continuing with Python](#python)
-* [SQL Queries](#sql)
-
-
+* [Introduction and Purpose of Project](#intro)
+* [Dataset Sources](#dataset)
+* [Analysis in R](#r)
+* [Findings & Conclusion](#conclusion)
 
 <br>
 
