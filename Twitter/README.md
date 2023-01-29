@@ -37,3 +37,20 @@
 
 <a name = "intro"></a>
 ## <ins> Introduction and Purpose of Project </ins>
+
+I first came across the idea for this project in my Business Analytics course back in 2021. Although I did well on that project, I had barely scratched the surface when it came to the analytical techniques I could have used. So, when I had a chance to revisit it in my special topics course, Business Analytics II, I refined many of the ideas and took the analysis much further.
+
+I recently became extremely interested in investing and the results of this project could help noob investors like me that don't want to blindly follow random advice.
+
+### Question to answer: Can Elon Musk's Tweets predict TSLA stock prices?
+
+### Business case:
+* Semi-strong market efficiency: stock prices reflect all historical data and all public data
+* Anatomy of a Tweet
+* Tweet content ---> news and potential insider info?
+* Likes, replies, retweets ---> reaction of the market
+* This could potentially be a great tool for investors
+
+### Recent Examples
+
+[Eli Lilly and Fake Tweet](https://www.fiercepharma.com/marketing/eli-lilly-hit-new-twitter-blue-fake-account-forced-apologize-over-free-insulin-tweet")
