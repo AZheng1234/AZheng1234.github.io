@@ -82,4 +82,9 @@ My original unrefined data source can be found on Kaggle in the link below:
 
 ### [Kaggle Dataset](https://www.kaggle.com/datasets/vidyapb/elon-musk-tweets-2015-to-2020?resource=download)
 
-Of course, I had to do a bit of data cleaning before I was able to use it.
+Of course, I had to do a bit of data cleaning before I was able to use it. This included:
+* eliminating variables that I didn't need
+* ensuring data types were correct
+
+### There's a lot I have yet to explain about my data, but here is the full spreadsheet (with a lot of workspace sheets):
+### [Project Data](https://docs.google.com/spreadsheets/d/1TWvQrDUsDOItZikiqc5ZJ7gOpHUUdNHCgzOW9kSWAMI/edit?usp=sharing)
