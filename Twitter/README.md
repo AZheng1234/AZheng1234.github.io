@@ -81,3 +81,5 @@ I recently became extremely interested in investing and the results of this proj
 My original unrefined data source can be found on Kaggle in the link below:
 
 ### [Kaggle Dataset](https://www.kaggle.com/datasets/vidyapb/elon-musk-tweets-2015-to-2020?resource=download)
+
+Of course, I had to do a bit of data cleaning before I was able to use it.
