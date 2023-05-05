@@ -119,12 +119,12 @@
                 </div>
             </div>
     </section>
-    <!-- Portfolio section -->
+    <!-- Project section -->
     <section id="portfolio-section" class="reveal fade-bottom">
-        <h2 class="text-center portfolio-header">Portfolio</h2>
+        <h2 class="text-center portfolio-header">Projects</h2>
         <div class="container portfolio-container">
             <div class="row portfolio-row">
-                <div class="col-4 portfolio-col">
+                <div class="col-3 portfolio-col">
                     <div class="item-container second-item" data-bs-toggle="modal" data-bs-target="#firstModal">
                         <div class="overlay-items">
                             <div class="row">
@@ -158,13 +158,15 @@
                                     predictors</span> of <span class="highlight-text">TSLA stock performance</span>.
                             </div>
                             <div class="modal-footer">
-                                <button  onclick="window.open('https://github.com/AZheng1234/AZheng1234.github.io/tree/main/Twitter','_blank')" type="button" class="btn btn-outline-primary">View more <i
+                                <button
+                                    onclick="window.open('https://github.com/AZheng1234/AZheng1234.github.io/tree/main/Twitter','_blank')"
+                                    type="button" class="btn btn-outline-primary">View more <i
                                         class="fa-solid fa-arrow-right"></i></button>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-4 portfolio-col">
+                <div class="col-3 portfolio-col">
                     <div class="item-container first-item" data-bs-toggle="modal" data-bs-target="#secondModal">
                         <div class="overlay-items">
                             <div class="row">
@@ -174,6 +176,21 @@
                                         Modeling StockX’s entity-relationship diagram, creating a randomized dataset,
                                         and
                                         using SQL queries to solve business problems.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3 portfolio-col">
+                    <div class="item-container third-item" data-bs-toggle="modal" data-bs-target="#thirdModal">
+                        <div class="overlay-items">
+                            <div class="row">
+                                <div class="col item-text">
+                                    <p class="item-title">Zillow Web Scraping</p>
+                                    <p class="item-description">
+                                        Scrape and clean data to visualize the real estate market in Atlanta using
+                                        Tableau and Python.
                                     </p>
                                 </div>
                             </div>
@@ -199,7 +216,43 @@
                                 were used to explore the data to solve business problems.
                             </div>
                             <div class="modal-footer">
-                                <button onclick="window.open('https://github.com/AZheng1234/AZheng1234.github.io/tree/main/StockX','_blank')" type="button" class="btn btn-outline-primary">View more <i
+                                <button
+                                    onclick="window.open('https://github.com/AZheng1234/AZheng1234.github.io/tree/main/StockX','_blank')"
+                                    type="button" class="btn btn-outline-primary">View more <i
+                                        class="fa-solid fa-arrow-right"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade" id="thirdModal" tabindex="-1" aria-labelledby="thirdModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="thirdModalLabel">Zillow Web Scraping</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                One of my goals a few years down the line is to live in a comfortable, modern home. I
+                                was curious about the current <span class="highlight-text">market in Atlanta</span> and
+                                I wanted to <span class="highlight-text">visualize</span> it better than
+                                what Zillow offers. I used <span class="highlight-text">Python</span> to scrape and
+                                clean the data, and I used <span class="highlight-text">Tableau</span> to
+                                create a useful <span class="highlight-text">dashboard</span> for those interested in
+                                purchasing a new home.
+                            </div>
+                            <!-- <div id="tableau-container" style="width:800px; height:700px;">
+                                
+                            </div> -->
+                            <div class="modal-footer final-modal-footer">
+                                <button id="demo-button"
+                                    onclick="window.open('https://public.tableau.com/views/AtlantaPropertiesforSale/Dashboard1?:language=en-US&:display_count=n&:origin=viz_share_link')"
+                                    type="button" class="btn btn-outline-danger">View dashboard <i
+                                        class="fa-solid fa-eye"></i></button>
+                                <button
+                                    onclick="window.open('https://github.com/AZheng1234/AZheng1234.github.io/tree/main/Web%20Scraping')"
+                                    type="button" class="btn btn-outline-primary">View more <i
                                         class="fa-solid fa-arrow-right"></i></button>
                             </div>
                         </div>
@@ -233,6 +286,7 @@
         crossorigin="anonymous"></script>
     <script src='https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js'></script>
     <script src="./animated.js"></script>
+
 
 </body>
 
