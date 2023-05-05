@@ -15,6 +15,9 @@
     box-shadow: rgb(0 0 0 / 5%) 0px 5px 10px;
 }
 
+.nav-link:hover{
+    color: #0E6EFD;
+}
 .navbar-brand {
     font-size: 1.3rem;
     font-weight: 500;
@@ -181,6 +184,12 @@
         padding-left: 25px;
         padding-right: 25px;
     }
+  
+}
+@media screen and (max-width: 989px) {
+    .profile-pic {
+        display: none;
+    }
 }
 
 .profile-container {
@@ -284,14 +293,9 @@
     cursor: pointer;
 }
 
-@media screen and (min-width: 992px) {
-    .second-item {
-        margin-right: 21px;
-    }
-}
 
-@media screen and (max-width: 992px) {
-    .second-item {
+@media screen and (max-width: 1190px) {
+    .item-container {
         margin-bottom: 28px;
     }
 }
@@ -323,6 +327,13 @@
     background: linear-gradient(var(--color), var(--color)) var(--position) / var(--width) var(--height) no-repeat; 
 }
 
+#demo-button{
+    display: flex;
+    align-items: center;
+}
+#demo-button > i{
+   margin-left: 5px;
+}
 .modal-body {
     line-height: 25px;
     color: rgba(62, 62, 62, 0.892);
@@ -338,6 +349,11 @@
     font-weight: 600;
 }
 
+.final-modal-footer{
+   display: flex;
+   justify-content: space-between;
+}
+
 .modal-header {
     align-items: normal;
 }
@@ -347,10 +363,10 @@
 }
 
 .first-item {
-    width: 424px;
-    height: 369px;
+    width: 324px;
+    height: 269px;
     background: url("./images/createX.jpg");
-    background-size: 808px 523px;
+    background-size: 691px 504px;
     display: flex;
     justify-content: end;
     flex-direction: column;
@@ -358,12 +374,21 @@
 
 .second-item {
     background: url("./images/twitter.jpg");
-    width: 424px;
-    height: 401px;
+    width: 324px;
+    height: 269px;
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
-    background-size: 420px;
+    background-size: 283px;
+}
+
+.third-item {
+    background: url("./images/Location.png");
+    background-repeat: no-repeat;
+    background-size: 330px;
+    background-position: center;
+    width: 324px;
+    height: 269px;
 }
 
 .portfolio-row {
@@ -387,7 +412,7 @@
 }
 
 .item-title {
-    font-size: 25px;
+    font-size: 20px;
     font-weight: 700;
     color: white;
     margin-bottom: 10px;
@@ -410,6 +435,7 @@
 }
 
 /* Contact section */
+
 .contact-header {
     font-size: 38px;
     letter-spacing: 1px;
